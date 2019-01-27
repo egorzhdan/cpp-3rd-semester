@@ -40,10 +40,12 @@ typedef int& foo;
 typedef foo& bar; // bar is int&
 ```
 Правило расширено для rvalue:
+```
 & и & = &
 & и && = &
-&& и & = &&
+&& и & = &
 && и && = &&
+```
 
 ```cpp
 void f(int&& a) {
